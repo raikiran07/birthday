@@ -8,7 +8,11 @@ body{
     
     /* background:#ebc934; */
     min-height:100vh;
-    background-image:url("two.jpg");
+    background: linear-gradient(
+      to bottom,
+      rgba(228, 220, 220, 0.5),
+      rgba(0,0,0, 100)
+    ),url(third.jpg);
     background-repeat:no-repeat;
     background-size:cover;
     color:#000;
@@ -30,7 +34,7 @@ body{
   /*   background:blue; */
     
     
-    font-weight:600;
+    font-weight:500;
     display:flex;
     justify-content:space-around;
     font-size:3rem;
@@ -38,8 +42,8 @@ body{
     /* border:2px solid #000; */
     font-family: 'Lato', sans-serif;
     text-align:center;
-    
-
+    align-items:center;
+    height:400px;
 
     
      }
@@ -48,9 +52,11 @@ body{
     
     padding:0.2rem;
     /* position:relative; */
-    border:3px solid black;
+    /* border:3px solid black; */
     width:90%;
     margin:1.5rem auto;
+    box-shadow:3px 5px 20px black;
+    /* display:none; */
   }
 
   
@@ -70,10 +76,12 @@ body{
   }
 
   #days,#hours,#minutes,#seconds{
-    font-size:3rem;
+    font-size:6rem;
+    font-weight:800;
   }
   .text{
-    font-size:1rem;
+    font-size:1.5rem;
+    font-weight:300;
     color:#fff;
   }
 
@@ -100,17 +108,124 @@ body{
   /* border-radius:8px; */
    background:#000;
   color:#fff; 
+  transition:all .3s ease;
 } 
+#start-btn:hover{
+  background:rgb(252, 140, 12);
+  box-shadow:2px 3px 8px rgb(252, 140, 12);
+}
+
+#start-btn::after{
+  background:rgb(252, 140, 12);
+  box-shadow:2px 3px 8px rgb(252, 140, 12);
+
+}
+
+.my-text{
+  /* border:1px solid black; */
+  width:85%;
+  margin:2rem auto;
+  padding:1.5rem;
+  font-family:'Lato', sans-serif;
+  font-weight:600;
+  color:#000;
+  font-size:16px;
+  /* background:#000; */
+  display:none;
+  transition:all .3s ease;
+}
+
+.my-text h2{
+  text-align:center;
+  margin:1rem;
+  color:#fff;
+  width:100%;
+}
+.my-text p{
+  margin-top:0.9rem;
+}
+
+.my-text div{
+  width:70%;
+  margin:0 auto;
+  text-align:center;
+  color:#fff;
+  font-size:18px;
+  
+}
+.my-text div p{
+  line-height:2rem;
+}
+#author{
+  color:#fff;
+  margin-top:3.5rem;
+  text-align:center;
+}
+
+/* .main{
+  display:none;
+} */
  
   @media only screen and (max-width:1260px){
+    
+    body{
+      max-width:100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(228, 220, 220, 0.5),
+        rgba(0,0,0, 100)
+      ),url(lordBuddha.jpg);
+      background-size:cover;
+      background-repeat:no-repeat;
+    }
+   
     body h1{
      
       font-size:1rem;
     }
     .container{
-      
+      height:200px;
       padding:10px;
       margin:0 2rem;
+    }
+    #days,#hours,#minutes,#seconds{
+      font-weight:400;
+      font-size:4rem;
+    }
+
+    .text{
+      font-size:1rem;
+      font-weight:200;
+    }
+
+    #heading{
+      font-size:2rem;
+    }
+    .container div{
+      padding:1rem;
+    }
+    .main{
+      box-shadow:none;
+    }
+    .my-text{
+      width:90%;
+      padding:0;
+    }
+    .my-text div{
+      width:90%;
+    }
+    .my-text h2{
+      font-size:1.5rem;
+      /* border:1px solid white; */
+      text-align:center;
+    }
+    .my-text div{
+      width:100%;
+      font-size:18px;
+     
+    }
+    .my-text div p{
+      line-height:2rem;
     }
   }
 
