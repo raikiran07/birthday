@@ -165,6 +165,29 @@ body{
 /* .main{
   display:none;
 } */
+.btn-class{
+  width:100%;
+  text-align:center;
+}
+
+#play{
+  margin-bottom:1.5rem;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:2px solid black;
+  background:rgb(139, 130, 130);
+  color:#fff;
+  font-family:'Mochiy Pop P One', sans-serif;
+  transition:all .3s ease;
+  
+}
+#play:hover{
+  cursor:pointer;
+  width:70px;
+  height:70px;
+  font-size:17px;
+}
  
   @media only screen and (max-width:1260px){
     

@@ -5,17 +5,36 @@ const newArray = [...arr1,...arr2];
 console.log(newArray);
 const counter = document.getElementById("counter");
 
-const strBtn = document.getElementById("start-btn");
+const strMusic = document.getElementById("play");
 const textMessage = document.querySelector(".my-text");
 const main = document.querySelector(".main");
 const heading = document.getElementById("heading");
+const music = new Audio("first.mp3");
+
+
+// const playBtn = document.getElementById("play");
+
+document.body.addEventListener("click",function(){
+  backgroundSound.play();
+  backgroundSound.loop = true;
+  backgroundSound.addEventListener('ended', function() {
+   this.currentTime = 0;
+   this.play();
+}, false)
+})
+
+
+
+
 
 
 // console.log(displayDay);
 // console.log(displayHours);
 
 function updateCounter(){
-  const targetTime = new Date('january 21,2022 00:00:00').getTime();
+
+ 
+  const targetTime = new Date('january 20,2022 14:25:00').getTime();
 
 const currentTime = new Date().getTime();
 
@@ -38,15 +57,35 @@ const displayHours = Math.floor((gap%days) / hours);
 const displayMinutes = Math.floor((gap%hours)/minutes);
 const displaySeconds = Math.floor((gap%minutes)/seconds);
 
+if(displayDays<10){
+  day.innerHTML = '0'+displayDays;
+}
+else{
   day.innerHTML = displayDays;
+}
+
+if(displayHours<10){
+  hour.innerHTML = '0'+displayHours;
+}
+else{
   hour.innerHTML = displayHours;
+}
+if(displayMinutes<10){
+  minute.innerHTML = '0'+displayMinutes;
+}
+else{
   minute.innerHTML = displayMinutes;
- 
+}
+if(displaySeconds<10){
+  second.innerHTML = '0'+displaySeconds;
+}
+else{
   second.innerHTML = displaySeconds;
+}
   second.style.color = "#e525fa";
   
-  if(displayDays===0&&displayHours===0&&displayMinutes===0&&displaySeconds===0){
-    clearInterval(updateCounter);
+  if(displayDays<=0&&displayHours<=0&&displayMinutes<=0&&displaySeconds<=0){
+ 
     main.style.display='none';
     textMessage.style.display="block";
     heading.innerHTML = "HAPPY 26th BIRTHDAY DA!!";
@@ -56,6 +95,17 @@ const displaySeconds = Math.floor((gap%minutes)/seconds);
   }
   
 }
+
+strMusic.addEventListener("click",function(){
+  if(strMusic.innerHTML=="PLAY"){
+    strMusic.innerHTML = "STOP";
+    music.play();
+  }
+  else{
+    strMusic.innerHTML = "PLAY";
+    music.pause();
+  }
+})
 updateCounter();
 const countDown = setInterval(updateCounter,1000);
 
