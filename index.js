@@ -34,7 +34,7 @@ document.body.addEventListener("click",function(){
 function updateCounter(){
 
  
-  const targetTime = new Date('january 21,2022 00:00:00').getTime();
+  const targetTime = new Date('january 21,2023 00:00:00').getTime();
 
 const currentTime = new Date().getTime();
 
