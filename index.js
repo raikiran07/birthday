@@ -12,6 +12,13 @@ const heading = document.getElementById("heading");
 const music = new Audio("first.mp3");
 
 
+window.onload = function playMusic(){
+music.play();
+ };
+
+ window.onload();
+
+
 // const playBtn = document.getElementById("play");
 
 document.body.addEventListener("click",function(){
@@ -34,7 +41,7 @@ document.body.addEventListener("click",function(){
 function updateCounter(){
 
  
-  const targetTime = new Date('january 21,2023 00:00:00').getTime();
+  const targetTime = new Date('february 27,2022 22:33:00').getTime();
 
 const currentTime = new Date().getTime();
 
