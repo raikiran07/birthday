@@ -12,7 +12,7 @@ body{
       to bottom,
       rgba(228, 220, 220, 0.5),
       rgba(0,0,0, 100)
-    ),url(third.jpg);
+    ),url(./images/third.jpg);
     background-repeat:no-repeat;
     background-size:cover;
     color:#000;
@@ -197,7 +197,7 @@ body{
         to bottom,
         rgba(228, 220, 220, 0.5),
         rgba(0,0,0, 100)
-      ),url(lordBuddha.jpg);
+      ),url(./images/lordBuddha.jpg);
       background-size:cover;
       background-repeat:no-repeat;
     }
