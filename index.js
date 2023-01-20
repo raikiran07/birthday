@@ -9,7 +9,7 @@ const strMusic = document.getElementById("play");
 const textMessage = document.querySelector(".my-text");
 const main = document.querySelector(".main");
 const heading = document.getElementById("heading");
-const music = new Audio("first.mp3");
+const music = new Audio("./audio/first.mp3");
 
 
 window.onload = function playMusic(){
