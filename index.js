@@ -16,7 +16,7 @@ window.onload = function playMusic(){
 music.play();
  };
 
- window.onload();
+//  window.onload();
 
 
 // const playBtn = document.getElementById("play");
@@ -95,7 +95,7 @@ else{
  
     main.style.display='none';
     textMessage.style.display="block";
-    heading.innerHTML = "HAPPY 26th BIRTHDAY DA!!";
+    heading.innerHTML = "HAPPY 27th BIRTHDAY DA!!";
     heading.style.color = '#f7cd23';
     
 
